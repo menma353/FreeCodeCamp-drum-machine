@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Pad from "./DrumPad"
+import Control from './Controls';
 
 
 const drumPads = [
@@ -18,6 +20,16 @@ function App() {
 
   return (
     <>
+      <div class='drum-machine'>
+        <div class="row">
+          <div class="col-8">
+                {drumPads.map(pad=> (<Pad id={pad.id} keyTrigger={pad.keyTrigger} url={pad.url} />))}
+          </div>
+          <div class="col-4">
+            <Control/>
+          </div>
+        </div>
+      </div>
     
     </>
   )
