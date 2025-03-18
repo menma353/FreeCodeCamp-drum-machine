@@ -11,8 +11,18 @@ const powerReducer = (state=true, action) => {
     }
 }
 
+const volumeReducer = (state=30, action) => {
+    switch(action.type){
+        case 'CHANGE_VOLUME':
+            return action.value
+        default:
+            return state
+    }
+}
+
 const allReducers = combineReducers({
-    power : powerReducer
+    power : powerReducer,
+    volume : volumeReducer
 })
 
 export default allReducers

@@ -24,7 +24,7 @@ function App() {
       <div class='drum-machine'>
         <div class="row">
           <div class="col-8">
-                {drumPads.map(pad=> (<Pad id={pad.id} keyTrigger={pad.keyTrigger} url={pad.url} />))}
+                {drumPads.map(pad=> (<Pad key={pad.id} id={pad.id} keyTrigger={pad.keyTrigger} url={pad.url} />))}
           </div>
           <div class="col-4">
             <Control/>
