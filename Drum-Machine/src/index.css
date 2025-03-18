@@ -20,6 +20,25 @@
   text-align: center;
   padding: 20px;
   font-family: "Raleway", sans-serif;
+  box-shadow: 2px 3px #140404;
+}
+
+.drum-pad:hover{
+  cursor: pointer;
+  background-color: #FF4242;
+}
+
+.drum-pad:active{
+  background-color: #890909;
+  cursor: pointer;
+  box-shadow: 5px 5px #140404;
+}
+ 
+
+
+.disable{
+  background-color: gray;
+  pointer-events: none;
 }
 
 .controls{
