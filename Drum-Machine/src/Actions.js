@@ -10,5 +10,8 @@ export const turnOff = () => {
    return {type: "CHANGE_VOLUME" , value}
  }
 
+export const setDisplay = text => {
+   return {type: "SET_DISPLAY", text}
+}
 
  export * as actions from './Actions'

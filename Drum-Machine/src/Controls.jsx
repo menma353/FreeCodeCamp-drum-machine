@@ -5,6 +5,7 @@ import { actions } from "./Actions"
 function Control(){
     const power = useSelector(state => state.power)
     const controlVolume = useSelector(state => state.volume)
+    const display = useSelector(state => state.display)
     const dispatch = useDispatch();
 
    
@@ -33,7 +34,7 @@ function Control(){
                 <button class={power ? "btn btn-success" : "btn btn-danger"} onClick={Regulate}> {power ? "On" : "Off"} </button>
                 <label for='volume' >Volume <span class='edge'>{controlVolume}</span></label>
                 <input type='range' id='volume' min="0" max='100' value={controlVolume} onChange = {changeThisVolume}></input>
-                <div id='display'></div>
+                <div id='display'>{power ? display : ''}</div>
             </div>
         </>
     )

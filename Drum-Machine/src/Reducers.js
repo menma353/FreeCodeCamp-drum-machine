@@ -20,9 +20,19 @@ const volumeReducer = (state=30, action) => {
     }
 }
 
+const displayReducer = (state='', action) => {
+    switch(action.type){
+        case "SET_DISPLAY":
+            return action.text
+        default:
+            return state
+    }
+}
+
 const allReducers = combineReducers({
     power : powerReducer,
-    volume : volumeReducer
+    volume : volumeReducer,
+    display : displayReducer
 })
 
 export default allReducers
