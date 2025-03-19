@@ -89,7 +89,7 @@ input[type="range"]::-webkit-slider-thumb {
   text-align: center;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   #drum-machine{
     width: 100%;
     background-image: blue;
